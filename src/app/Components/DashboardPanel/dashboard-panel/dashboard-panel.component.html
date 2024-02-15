@@ -18,7 +18,10 @@
                 <span>ADD  </span>
                 <i class="pi pi-plus" style="font-size: 1.5rem"></i> 
             </button>
-            @if (popup == 'group') {
+            <p-dialog [(visible)]="visible" [modal]="true" [style]="{ width: '70vw', height: '70vh' }" [draggable]="false" [resizable]="false">
+                  <ng-container *ngTemplateOutlet="popup"></ng-container>  
+            </p-dialog>
+            <!-- @if (popup == 'group') {
                 <p-dialog [(visible)]="visible" [modal]="true" [style]="{ width: '70vw', height: '70vh' }" [draggable]="false" [resizable]="false">
                     
                 </p-dialog>
@@ -26,7 +29,7 @@
             @else if (popup == 'expense') {
                 <p-dialog [(visible)]="visible" [modal]="true" [style]="{ width: '70vw', height: '70vh' }" [draggable]="false" [resizable]="false">
                 </p-dialog>
-            }
+            } -->
 
         </ng-template>
     }
@@ -36,7 +39,7 @@
 
     <div [ngClass]="{ grid: grid, list: !grid }">
         <div class="item">
-            <ng-content></ng-content>
+            <ng-container *ngTemplateOutlet="content"></ng-container>
         </div> 
     </div>
 
