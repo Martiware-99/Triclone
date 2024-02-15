@@ -1,0 +1,30 @@
+.group-settings-menu {
+    display: flex;
+  }
+  
+  .vertical-menu {
+    width: 15%;
+    border-right: 1px solid #ccc;
+  }
+  
+  .vertical-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .vertical-menu ul li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .vertical-menu ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .menu-content {
+    flex-grow: 1;
+    padding: 10px;
+  }
+  

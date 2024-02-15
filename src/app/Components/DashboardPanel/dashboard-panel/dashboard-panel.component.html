@@ -1,0 +1,45 @@
+<p-panel>
+    <ng-template pTemplate="header">
+        <div class="flex align-items-center gap-2">
+            <span class="font-bold">{{ header }}</span>
+        </div>
+    </ng-template>
+
+    @if(setting == 'viewAll') {
+        <ng-template pTemplate="icons" >
+            <button class=" p-link" routerLink="{{route}}">
+                <span>View All</span>
+            </button>
+        </ng-template>
+    }
+    @else if(setting == 'add'){
+        <ng-template pTemplate="icons">
+            <button class=" p-link" (click)="showPopup()">
+                <span>ADD  </span>
+                <i class="pi pi-plus" style="font-size: 1.5rem"></i> 
+            </button>
+            @if (popup == 'group') {
+                <p-dialog [(visible)]="visible" [modal]="true" [style]="{ width: '70vw', height: '70vh' }" [draggable]="false" [resizable]="false">
+                    
+                </p-dialog>
+            }
+            @else if (popup == 'expense') {
+                <p-dialog [(visible)]="visible" [modal]="true" [style]="{ width: '70vw', height: '70vh' }" [draggable]="false" [resizable]="false">
+                </p-dialog>
+            }
+
+        </ng-template>
+    }
+    @else if (setting == 'none') {
+        <ng-template pTemplate="icons"></ng-template>
+    }
+
+    <div [ngClass]="{ grid: grid, list: !grid }">
+        <div class="item">
+            <ng-content></ng-content>
+        </div> 
+    </div>
+
+</p-panel>
+
+

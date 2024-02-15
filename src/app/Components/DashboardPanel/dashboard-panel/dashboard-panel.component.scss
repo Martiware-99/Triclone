@@ -1,0 +1,16 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+  
+:host ::ng-deep app-group-card {
+    display: inline-block;
+    width: calc(50% - 10px);
+    margin: 0px 5px 0px 5px; 
+}
+
+:host ::ng-deep .p-element .p-panel {
+    margin-bottom: 35px;
+}
+

@@ -1,0 +1,33 @@
+<app-top-bar></app-top-bar>
+
+<h2 style="color: var(--text-color);">Profile settings</h2>
+ 
+<p-tabView>
+    <p-tabPanel header="Edit"> 
+
+        <div class="form-fields">
+          <div class="p-fluid p-formgrid p-grid">
+            <div class="p-field p-col-12">
+              <label for="username" class="p-d-block">Username</label>
+              <input id="username" type="text" pInputText placeholder="Change your username" />
+            </div>
+            <div class="p-field p-col-12">
+              <label for="password" class="p-d-block">Password</label>
+              <input id="password" type="password" pInputText placeholder="Change your password" />
+            </div>
+          </div>
+        </div>
+
+        <div class="container" style="margin-top: 25px;">
+            <p-button label="Edit" icon="pi pi-check"></p-button>
+        </div>
+
+    </p-tabPanel>
+    <p-tabPanel header="Delete">
+        <div class="container">
+            <p-button label="Delete" icon="pi pi-times" severity="danger"></p-button>
+        </div>
+    </p-tabPanel>
+</p-tabView>
+    
+    

@@ -1,0 +1,11 @@
+<app-top-bar></app-top-bar>
+
+<div class="page-container">
+    <app-dashboard-panel [setting]="'add'" [header]="'My groups'" [grid]="true">
+
+        <ng-container *ngFor="let group of groups; let i = index">
+            <app-group-card></app-group-card>
+        </ng-container>
+
+    </app-dashboard-panel>
+</div>

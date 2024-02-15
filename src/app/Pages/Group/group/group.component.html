@@ -1,0 +1,27 @@
+<app-top-bar></app-top-bar>
+
+
+<div class="page-container">
+    <app-group-header></app-group-header>
+
+    <app-dashboard-panel [setting]="'none'" [header]="'Group Balance'">
+
+        <ng-container *ngFor="let balance of balances; let i = index">
+            <app-balance-list-item></app-balance-list-item>
+        </ng-container>
+
+    </app-dashboard-panel>
+
+    <app-dashboard-panel [setting]="'add'" [header]="'Expenses'">
+
+        <ng-template #popup>
+            <app-add-group ></app-add-group>
+        </ng-template>
+
+        <ng-container *ngFor="let expense of expenses; let i = index">
+            <app-expense></app-expense>
+        </ng-container>
+
+    </app-dashboard-panel>
+
+</div>

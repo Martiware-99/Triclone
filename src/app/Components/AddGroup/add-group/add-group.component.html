@@ -1,0 +1,22 @@
+<p-card class="modal-card" [style]="{ 'border-radius': '10px' }">
+    <div>
+      <label for="groupName">Group Name</label>
+      <input id="groupName" type="text" pInputText [(ngModel)]="groupName" class="p-inputtext" />
+    </div>
+    <div>
+      <label for="imageUrl">Image URL</label>
+      <input id="imageUrl" type="text" pInputText [(ngModel)]="imageUrl" class="p-inputtext" />
+    </div> 
+    <div>
+      <div class="group-members">
+        <label>Group Members</label>
+        <button pButton icon="pi pi-plus" class="p-button-rounded p-button-success" (click)="addMember()"></button>
+      </div>
+      <div *ngFor="let member of members; let i = index" class="member">
+        <input type="text" pInputText [(ngModel)]="members[i].name" placeholder="Name" class="p-inputtext" />
+        <input type="text" pInputText [(ngModel)]="members[i].email" placeholder="Email" class="p-inputtext" />
+        <button pButton type="button" icon="pi pi-times" class="p-button-rounded p-button-danger" (click)="removeMember(i)"></button>
+      </div>
+    </div>
+    <button pButton label="Save" class="p-button-success p-button-rounded" (click)="saveGroup()"></button>
+</p-card> 

@@ -1,0 +1,33 @@
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+  
+    &-left {
+      display: flex;
+      align-items: center;
+  
+      .sitename {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-right: 20px;
+      }
+    }
+  
+    &-right {
+      display: flex;
+      align-items: center;
+  
+      .profile {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+      }
+    }
+  }
+  

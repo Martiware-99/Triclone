@@ -1,0 +1,62 @@
+.expense-item {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 100%; 
+    justify-content: space-between;
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 5px; 
+  }
+  
+  .date-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .description-section {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .description {
+    font-size: larger;
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .group-tag {
+    background-color: #007bff;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  
+  .amount {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+ :host ::ng-deep .p-card-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  :host ::ng-deep div.p-card-body {
+    padding: 1rem;
+  }

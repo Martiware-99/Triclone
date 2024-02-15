@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: var(--primary-50); /* Adjust background color as needed */
+  }
+  
+  .group-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .group-image {
+    width: 40px; /* Adjust image size as needed */
+    height: 40px; /* Adjust image size as needed */
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 10px;
+  }
+  
+  .group-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .settings {
+    display: flex;
+    align-items: center;
+  }
+  
+  .settings-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: #333; /* Adjust icon color as needed */
+  }
+  

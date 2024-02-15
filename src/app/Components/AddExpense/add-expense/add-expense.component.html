@@ -1,0 +1,19 @@
+<p-card class="modal-card" [style]="{ 'border-radius': '10px' }">
+    <div>
+      <label for="description">Description</label>
+      <input id="description" type="text" pInputText [(ngModel)]="description" class="p-inputtext" />
+    </div>
+    <div>
+      <label for="amount">Amount</label>
+      <input id="amount" type="number" pInputText [(ngModel)]="amount" class="p-inputtext" />
+    </div>
+    <div class="group-members">
+      <label>Members</label>
+      <div *ngFor="let member of members" class="member">
+        <p-checkbox [(ngModel)]="member.checked" [binary]="true" inputId="binary"></p-checkbox>
+        <span>{{ member.name }}</span>
+        <label>{{ splitAmount }}</label>
+      </div>
+    </div>
+    <button pButton label="Add" class="p-button-success p-button-rounded" (click)="addExpense()"></button>
+</p-card>  

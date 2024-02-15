@@ -1,0 +1,27 @@
+<app-top-bar></app-top-bar>
+
+<div class="page-container">
+
+    <h1 style="color: var(--text-color);">DASHBOARD</h1>
+    
+    <app-dashboard-panel [setting]="'viewAll'" [header]="'My groups'" [grid]="true" [route]="'/mygroups'">
+
+        <ng-container *ngFor="let item of items; let i = index">
+            <ng-container *ngIf="i < 4">
+                <app-group-card></app-group-card>
+            </ng-container>
+        </ng-container>
+
+    </app-dashboard-panel>
+
+    <app-dashboard-panel [setting]="'viewAll'" [header]="'My Expenses'" [route]="'/myexpenses'">
+        
+        <ng-container *ngFor="let expense of ($expenses | async) ; let i = index">
+            <ng-container *ngIf="i < 6">
+                <app-expense></app-expense>
+            </ng-container>
+        </ng-container>
+
+    </app-dashboard-panel>
+     
+</div>

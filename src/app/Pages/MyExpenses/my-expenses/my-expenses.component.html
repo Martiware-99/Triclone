@@ -1,0 +1,11 @@
+<app-top-bar></app-top-bar>
+
+<div class="page-container">
+    <app-dashboard-panel [setting]="'none'" [header]="'My Expenses'">
+
+        <ng-container *ngFor="let expense of expenses ; let i = index">
+            <app-expense></app-expense>
+        </ng-container>
+
+    </app-dashboard-panel>
+</div>

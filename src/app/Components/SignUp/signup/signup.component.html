@@ -1,0 +1,29 @@
+<p-card class="login-card">
+    <div class="create-account">Create an account</div>
+    <div class="form-fields">
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-field p-col-12">
+          <label for="username" class="p-d-block">Username</label>
+          <input id="username" type="text" pInputText placeholder="Enter your username" />
+        </div>
+        <div class="p-field p-col-12">
+          <label for="email" class="p-d-block">Email</label>
+          <input id="email" type="text" pInputText placeholder="Enter your email" />
+        </div>
+        <div class="p-field p-col-12">
+          <label for="password" class="p-d-block">Password</label>
+          <input id="password" type="password" pInputText placeholder="Enter your password" />
+        </div>
+        <div class="p-field p-col-12">
+            <label for="password" class="p-d-block">Confirm Password</label>
+            <input id="password" type="password" pInputText placeholder="Confirm your password" />
+        </div>
+      </div>
+      <button pButton type="button" label="Log In" class="p-button-primary p-mt-3 login-button" routerLink="/dashboard"></button>
+    </div>
+    <div class="signup-link">
+      <span>Already signed up?  </span>
+      <a class="p-ml-1" routerLink="/login">Log In</a>
+    </div>
+</p-card>
+  
