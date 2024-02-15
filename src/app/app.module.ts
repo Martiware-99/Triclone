@@ -39,7 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     AddGroupComponent,
     AddExpenseComponent,
     SettingsComponent,
-    routingComponents
+    routingComponents,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +47,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     PrimeModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
